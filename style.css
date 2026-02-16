@@ -1,0 +1,98 @@
+/* Style général du corps */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f2f5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+    text-align: center;
+}
+
+/* Titres */
+#titre {
+    color: #1a73e8;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+#titre2 {
+    margin: 20px;
+    font-size: 1.5rem;
+    max-width: 600px;
+}
+
+/* Images */
+img {
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+    max-width: 90%; /* Pour que ça reste responsive */
+    height: auto;
+}
+
+/* Boutons */
+button {
+    background-color: #ffffff;
+    border: 2px solid #1a73e8;
+    color: #1a73e8;
+    padding: 12px 24px;
+    margin: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    min-width: 150px;
+}
+
+button:hover {
+    background-color: #1a73e8;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(26, 115, 232, 0.3);
+}
+
+/* Bouton Suivant (différenciation visuelle) */
+#suivant-btn { /* Si tu veux lui donner un ID spécifique plus tard */
+    background-color: #34a853;
+    border-color: #34a853;
+    color: white;
+}
+
+/* Masquer les boutons quand ils sont en "hidden" */
+[hidden] {
+    display: none !important;
+}
+
+/* Conteneur pour les boutons de réponse pour les mettre en grille */
+.button-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 500px;
+}
+
+/* Animation d'apparition fluide */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Animation d'erreur (secousse) */
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-10px); }
+    75% { transform: translateX(10px); }
+}
+
+/* Classes qu'on appliquera en JS */
+.anime-entree {
+    animation: fadeIn 0.5s ease-out;
+}
+
+.anime-erreur {
+    animation: shake 0.3s ease-in-out;
+}
